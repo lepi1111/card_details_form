@@ -1,0 +1,336 @@
+:root {
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    height: 100%;
+}
+
+::placeholder {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 23px;
+    color: #21092F;
+    opacity: 0.25;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.container-background {
+    background-image: url(../images/bg-main-mobile.png);
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-header-images {
+    position: relative;
+    height: 200px;
+    width: 375px;
+    margin-inline: auto;
+}
+
+.front-side-card {
+    background-image: url(../images/bg-card-front.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-inline: 20px;
+    height: 157px;
+    width: 286px;
+    left: -0.25rem;
+    bottom: -6.15rem;
+}
+
+.back-side-card {
+    background-image: url(../images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    height: 157px;
+    width: 286px;
+    right: 1rem;
+    top: 2rem;
+}
+
+.cardHolder_imgs {
+    display: flex;
+    align-items: center;
+    margin-left: 1.188rem;
+    margin-top: 1.1rem;
+}
+
+.round-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 0.5rem;
+}
+
+.round-img_small {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.container_name-expDate {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 1.25rem;
+    margin-top: 1.063rem;
+    color: #fff;
+}
+
+.expDates {
+    display: flex;
+}
+
+#front-side-card_number {
+    margin-left: 1.25rem;
+    margin-right: 1.5rem;
+    margin-top: 2.375rem;
+    font-size: 18px;
+    letter-spacing: 2.2px;
+    line-height: 23px;
+    color: #fff;
+}
+
+.front-side-card_name,
+.front-side-card_expDate1,
+.front-side-card_expDate,
+.front-side-card_expDate2 {
+    font-size: 9px;
+    font-weight: 500;
+    line-height: 11px;
+    text-align: right;
+    letter-spacing: 1.28571px;
+    text-transform: uppercase;
+}
+
+/* BACKSIDE CARD */
+.back-side-card_cvc {
+    position: absolute;
+    right: 2.2rem;
+    color: #fff;
+    top: 4.45rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 11px;
+    letter-spacing: 1.28571px;
+    text-transform: uppercase;
+}
+
+/* FORM */
+label {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 9px;
+}
+
+.label-spacing {
+    margin-top: 20px;
+}
+
+.container-form {
+    background-color: #fff;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    margin-block: 6rem;
+    width: 327px;
+    margin-inline: auto;
+}
+
+input {
+    color: #21092F;
+    height: 45px;
+    border: 1px solid #DFDEE0;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.greskaBrojevaKartice {
+    outline: 2px solid red;
+}
+
+.error {
+    color: red;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 8px;
+}
+
+.container_date-cvc {
+    display: flex;
+    gap: 11px;
+}
+
+.date1_date2 {
+    display: flex;
+    gap: 6px;
+}
+
+.date_1,
+.date_2,
+.container_cvc {
+    display: flex;
+    flex-direction: column;
+}
+
+#cardOwner,
+#cardNumber,
+#cardCVC {
+    padding-left: 10px;
+}
+
+#cardExpDate1,
+#cardExpDate2 {
+    width: 72px;
+    text-align: center;
+}
+
+#cardCVC{
+    width: 164px;
+}
+
+.button {
+    height: 45px;
+    color: #fff;
+    background-color: #21092F;
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    border: 0;
+}
+
+.container-form_button {
+    margin-top: 1.75rem;
+    cursor: pointer;
+}
+
+.container-form_button:active,
+.container-form_button:hover {
+    background-color: #603f73;
+}
+
+.disabled {
+    cursor: none;
+    pointer-events: none;
+    background-color: #755588;
+}
+
+/* container that opens after the completion of inserting data in form */
+
+.container-form_checked {
+    display: none;
+    text-align: center;
+}
+
+.container-form_checked__header {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 3.42222px;
+    color: #21092F;
+    text-transform: uppercase;
+    margin-top: 2.188rem;
+    margin-bottom: 1rem;
+}
+
+.container-form_checked__message {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: #8F8694;
+}
+
+.container-form_checked__button {
+    margin-top: 3rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+.container-form_checked__button:hover {
+    background-color: #9c87a9;
+}
+
+
+/* DESKTOP BREAKPOINT */
+@media screen and (min-width:1440px) {
+    article {
+        display: flex;
+        align-items: center;
+    }
+
+    .container-background {
+        background-image: url(../images/bg-main-desktop.png);
+        height: 100vh;
+        width: 483px;
+        position: relative;
+    }
+
+    .container-header-images {
+        position: absolute;
+        top: 50%;
+        left: 54%;
+    }
+
+    .front-side-card {
+        top: -85%;
+        left: 0%;
+    }
+
+    .back-side-card {
+        left: 20%;
+    }
+
+    .container-form {
+        margin-left: 350px;
+        width: 380px;
+    }
+
+    .container_date-cvc {
+        gap: 20px;
+    }
+
+    .date1_date2 {
+        gap: 10px;
+    }
+
+    #cardExpDate1,
+    #cardExpDate2 {
+        width: 80px;
+    }
+
+    #cardCVC{
+        width: 191px;
+    }
+
+}

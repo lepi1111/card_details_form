@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <title>Interactive Form</title>
+</head>
+
+<body>
+    <article>
+        <div class="container-background">
+            <div class="container-header-images">
+                <div class="back-side-card position-absolute">
+                    <p class="back-side-card_cvc">000</p>
+                </div>
+                <div class="front-side-card position-absolute">
+                    <div class="cardHolder_imgs">
+                        <div class="cardHolder_profile-img round-img"></div>
+                        <div class="cardHolder_profile-second_img round-img_small"></div>
+                    </div>
+                    <p id="front-side-card_number">0000 0000 0000 0000</p>
+                    <div class="container_name-expDate">
+                        <h3 class="front-side-card_name">jane appleseed</h3>
+                        <div class="expDates">
+                            <p class="front-side-card_expDate1">00</p>
+                            <p class="front-side-card_expDate">/</p>
+                            <p class="front-side-card_expDate2">00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form class="container-form">
+            <label class="personName-label" for="personName">cardholder name</label>
+            <input name="personName" type="text" id="cardOwner" placeholder="e.g. Jane Appleseed">
+            <label class="label-spacing" for="cardNumber">card number</label>
+            <input name="cardNumber" type="text" id="cardNumber" onkeypress="return dozvoliBrojeve(event)"
+                placeholder="e.g. 1234 5678 9123 0000">
+            <p class="error" id="error-cardNumber"></p>
+            <div class="container_date-cvc">
+                <div class="container_date label-spacing">
+                    <div class="date1_date2">
+                        <div class="date_1">
+                            <label id="cardExpDate" for="cardExpDate1">exp. date</label>
+                            <input placeholder="MM" type="text" name="cardExpDate1" id="cardExpDate1"
+                                onkeypress="return dozvoliBrojeve(event)">
+                        </div>
+                        <div class="date_2">
+                            <label class="date_2__label" for="cardExpDate2">(mm/yy)</label>
+                            <input placeholder="YY" type="text" name="cardExpDate2" id="cardExpDate2"
+                                onkeypress="return dozvoliBrojeve(event)">
+                        </div>
+                    </div>
+                </div>
+                <div class="container_cvc label-spacing">
+                    <label for="cardCVC">cvc</label>
+                    <input type="text" name="cardCVC" id="cardCVC" placeholder="e.g. 123" maxlength="3"
+                        onkeypress="return dozvoliBrojeve(event)">
+                    <p class="error" id="error-cvc"></p>
+                </div>
+            </div>
+            <button type="button" class="button container-form_button">Confirm</button>
+        </form>
+        <div class="container-form_checked container-form" id="container-checked">
+            <img src="images/icon-complete.svg" alt="Image that represent the completion of inputing data in form">
+            <h3 class="container-form_checked__header">thank you!</h3>
+            <p class="container-form_checked__message">We've added your card details</p>
+            <button class="button container-form_checked__button" id="buttonContinue">Continue</button>
+        </div>
+    </article>
+</body>
+<script src="index.js"></script>
+
+</html>
